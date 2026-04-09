@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Park Wellness - רמת השרון | G-Group</title>
+    <meta name="description" content="G-Park Wellness רמת השרון - דירות יוקרה מ- ₪38,000 למ&quot;ר. חיסכון של עד ₪1,000,000! 14 בניינים, 400+ יחידות דיור, 50 דונם פארק, 8 מתקני Wellness.">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c9a962; }
+        .project-hero { position: relative; height: 80vh; min-height: 600px; display: flex; align-items: flex-end; background: linear-gradient(to top, var(--bg-primary), transparent); margin-top: 80px; }
+        .project-hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .project-hero-bg::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(10,10,10,0.9) 0%, transparent 60%); }
+        .project-hero-bg::after { content: 'G-PARK WELLNESS'; position: absolute; font-family: 'Playfair Display', serif; font-size: clamp(60px, 15vw, 180px); color: rgba(201,169,98,0.08); font-weight: 700; letter-spacing: 0.1em; }
+        .project-hero-content { position: relative; z-index: 10; padding: 60px 0; }
+        .project-hero h1 { font-size: clamp(40px, 8vw, 72px); margin-bottom: 12px; color: var(--text-primary); }
+        .project-hero .tagline { font-size: clamp(18px, 3vw, 28px); color: var(--gold); font-weight: 300; margin-bottom: 16px; }
+        .project-hero .location { font-size: 18px; color: var(--text-secondary); font-weight: 300; }
+        .project-hero .status { display: inline-block; margin-top: 20px; padding: 10px 24px; background: rgba(201,169,98,0.15); color: var(--gold); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; }
+        .project-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 40px 0; }
+        .stat-item { text-align: center; padding: 24px 16px; background: var(--bg-tertiary); border: 1px solid var(--border); }
+        .stat-item .number { display: block; font-family: 'Playfair Display', serif; font-size: 36px; color: var(--gold); font-weight: 600; margin-bottom: 4px; }
+        .stat-item .label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+        .project-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 60px; }
+        .detail-item { text-align: center; padding: 24px; background: var(--bg-tertiary); border: 1px solid var(--border); }
+        .detail-item .label { color: var(--text-muted); font-size: 12px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .detail-item .value { color: var(--text-primary); font-size: 18px; font-weight: 600; }
+        .section-title { font-size: clamp(28px, 4vw, 42px); text-align: center; margin-bottom: 16px; }
+        .section-subtitle { text-align: center; color: var(--text-secondary); font-size: 18px; font-weight: 300; margin-bottom: 48px; }
+        .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 60px; }
+        .concept-card { padding: 32px; background: var(--bg-tertiary); border: 1px solid var(--border); }
+        .concept-card h3 { font-size: 20px; margin-bottom: 12px; color: var(--gold); }
+        .concept-card p { color: var(--text-secondary); font-weight: 300; line-height: 1.8; }
+        .amenities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 60px; }
+        .amenity-item { display: flex; align-items: center; gap: 16px; padding: 20px; background: var(--bg-tertiary); border: 1px solid var(--border); }
+        .amenity-item .icon { font-size: 28px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: rgba(201,169,98,0.1); border-radius: 12px; }
+        .amenity-item .text { flex: 1; }
+        .amenity-item .name { font-size: 16px; font-weight: 500; margin-bottom: 4px; }
+        .amenity-item .desc { font-size: 13px; color: var(--text-muted); }
+        .apartments-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 60px; }
+        .apartment-card { padding: 32px; background: var(--bg-tertiary); border: 1px solid var(--border); text-align: center; transition: all 0.3s ease; }
+        .apartment-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+        .apartment-card .type { display: inline-block; padding: 6px 16px; background: rgba(201,169,98,0.15); color: var(--gold); font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
+        .apartment-card .size { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 600; margin-bottom: 8px; }
+        .apartment-card .features { color: var(--text-secondary); font-size: 14px; margin-bottom: 16px; }
+        .apartment-card .price-label { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+        .apartment-card .price { font-size: 24px; color: var(--gold); font-weight: 600; }
+        .location-section { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; align-items: center; }
+        .location-info h3 { font-size: 28px; margin-bottom: 20px; }
+        .location-info p { color: var(--text-secondary); font-weight: 300; line-height: 1.8; margin-bottom: 24px; }
+        .location-features { display: flex; flex-direction: column; gap: 16px; }
+        .location-feature { display: flex; align-items: center; gap: 16px; }
+        .location-feature .icon { font-size: 24px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(201,169,98,0.1); border-radius: 12px; }
+        .location-feature .text { font-size: 16px; font-weight: 400; }
+        .location-feature .highlight { color: var(--gold); font-weight: 600; }
+        .location-map { height: 400px; background: var(--bg-tertiary); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; }
+        .cta-section { text-align: center; padding: 60px 40px; background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%); border: 1px solid var(--border); margin-bottom: 60px; }
+        .cta-section h2 { font-size: 36px; margin-bottom: 16px; }
+        .cta-section p { color: var(--text-secondary); font-size: 18px; margin-bottom: 32px; }
+        .cta-section .highlight { color: var(--gold); font-weight: 600; font-size: 24px; display: block; margin-bottom: 24px; }
+        .back-link { text-align: center; margin-top: 40px; }
+        @media (max-width: 768px) { .project-stats { grid-template-columns: repeat(2, 1fr); } .location-section { grid-template-columns: 1fr; } .location-map { height: 250px; } }
+    </style>
+</head>
+<body>
+    <header class="header scrolled" id="header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo">G-GROUP</a>
+            <nav class="nav-desktop">
+                <a href="../index.html">בית</a>
+                <a href="../about.html">אודות</a>
+                <a href="../projects.html">פרויקטים</a>
+                <a href="../media.html">מן המדיה</a>
+                <a href="../contact.html">צור קשר</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+        <a href="../index.html">בית</a><a href="../about.html">אודות</a><a href="../projects.html">פרויקטים</a><a href="../media.html">מן המדיה</a><a href="../contact.html">צור קשר</a>
+    </div>
+
+    <section class="project-hero">
+        <div class="project-hero-bg"></div>
+        <div class="container project-hero-content">
+            <h1>G-Park Wellness</h1>
+            <p class="tagline">גרים על הפארק, משלמים הרבה פחות</p>
+            <p class="location">רמת השרון</p>
+            <span class="status">בבנייה</span>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="project-stats">
+                <div class="stat-item"><span class="number">14</span><span class="label">בניינים</span></div>
+                <div class="stat-item"><span class="number">400+</span><span class="label">יחידות דיור</span></div>
+                <div class="stat-item"><span class="number">50</span><span class="label">דונם פארק</span></div>
+                <div class="stat-item"><span class="number">8</span><span class="label">מתקני Wellness</span></div>
+            </div>
+
+            <h2 class="section-title">המיקום</h2>
+            <p class="section-subtitle">בין תל אביב לרמת השרון</p>
+            
+            <div class="location-section">
+                <div class="location-info">
+                    <h3>גישה נוחה לכל מקום</h3>
+                    <p>G-Park Wellness גובל בשכונות הצפוניות של תל אביב: תל ברוך צפון, רמת אביב ג', צהלה ונאות אפקה. לפארק צפון גישה קלה ומהירה לנתיבי אילון, כביש 2 (החוף), כביש 5, והכניסה החדשה מכביש 20.</p>
+                    <div class="location-features">
+                        <div class="location-feature"><span class="icon">🚗</span><span class="text"><span class="highlight">2 דקות</span> מנתיבי אילון</span></div>
+                        <div class="location-feature"><span class="icon">🏖️</span><span class="text"><span class="highlight">10 דקות</span> מהים</span></div>
+                        <div class="location-feature"><span class="icon">🌳</span><span class="text"><span class="highlight">סמוך</span> לפארק צפון</span></div>
+                    </div>
+                </div>
+                <div class="location-map">
+                    <span style="color: var(--text-muted);">מפה - רמת השרון</span>
+                </div>
+            </div>
+
+            <h2 class="section-title">החזון</h2>
+            <p class="section-subtitle">מגדירים מחדש את חוויית המגורים</p>
+            
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h3>פוסט-עירוני</h3>
+                    <p>G-Park Wellness מגדיר מחדש את חוויית המגורים של צפון תל אביב. הפרויקט מציע גישה פוסט-עירונית למשפחה במאה ה-21.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>קהילתי</h3>
+                    <p>הדיאלוג בין הבניינים יוצר רחובות פנימיים, שבילי אופניים והליכה, גינות ומגוון גדול של חללים משותפים מלאי אווירה וסטייל.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>בריא וירוק</h3>
+                    <p>חללים משותפים בסגנון SOCIAL CLUB היוצרים חוויית מגורים הוליסטית, קהילתית, בריאה וירוקה יותר.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">מתקני Wellness</h2>
+            <p class="section-subtitle">כל מה שצריך לחיים איכותיים</p>
+            
+            <div class="amenities-grid">
+                <div class="amenity-item"><span class="icon">🏊</span><div class="text"><div class="name">בריכת שחייה</div><div class="desc">חצי אולימפית</div></div></div>
+                <div class="amenity-item"><span class="icon">🏋️</span><div class="text"><div class="name">חדר כושר</div><div class="desc">מתקדם ומאובזר</div></div></div>
+                <div class="amenity-item"><span class="icon">🧖</span><div class="text"><div class="name">ספא וסאונה</div><div class="desc">לרגיעה מוחלטת</div></div></div>
+                <div class="amenity-item"><span class="icon">🧘</span><div class="text"><div class="name">סטודיו פילאטיס ויוגה</div><div class="desc">לגוף ולנפש</div></div></div>
+                <div class="amenity-item"><span class="icon">🎬</span><div class="text"><div class="name">חדר קולנוע</div><div class="desc">לשעות הפנאי</div></div></div>
+                <div class="amenity-item"><span class="icon">💼</span><div class="text"><div class="name">מתחם עבודה</div><div class="desc">משותף</div></div></div>
+                <div class="amenity-item"><span class="icon">🛏️</span><div class="text"><div class="name">חדרי אירוח</div><div class="desc">לאורחים</div></div></div>
+                <div class="amenity-item"><span class="icon">👶</span><div class="text"><div class="name">מתחם ילדים</div><div class="desc">מאובטח ומושלם</div></div></div>
+            </div>
+
+            <h2 class="section-title">הדירות</h2>
+            <p class="section-subtitle">מגוון גדלים לכל משפחה</p>
+            
+            <div class="apartments-grid">
+                <div class="apartment-card">
+                    <span class="type">פופולרי</span>
+                    <div class="size">3 חדרים</div>
+                    <div class="features">95-110 מ"ר • מרפסת נוף • מטבח מאובזר • חניה</div>
+                    <div class="price-label">מחיר החל מ-</div>
+                    <div class="price">₪38,000/מ"ר</div>
+                </div>
+                <div class="apartment-card">
+                    <span class="type">מבוקש</span>
+                    <div class="size">4 חדרים</div>
+                    <div class="features">120-140 מ"ר • מרפסת נוף • הורים בנפרד • חניה • מחסן</div>
+                    <div class="price-label">מחיר החל מ-</div>
+                    <div class="price">₪38,000/מ"ר</div>
+                </div>
+                <div class="apartment-card">
+                    <span class="type">יוקרה</span>
+                    <div class="size">פנטהאוז</div>
+                    <div class="features">180-220 מ"ר • גג פרטי • נוף לים • חניה כפולה • מחסן</div>
+                    <div class="price-label">מחיר החל מ-</div>
+                    <div class="price">₪38,000/מ"ר</div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>לתיאום פגישה</h2>
+                <p>נשמח להזמין אתכם לבקר במשרד המכירות ולהתרשם מהפרויקט מקרוב</p>
+                <span class="highlight">מתווה תשלום: 10% בלבד בחתימה</span>
+                <a href="../contact.html" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; background: var(--gold); color: var(--bg-primary); font-weight: 600; text-decoration: none; border-radius: 4px;">
+                    לתיאום פגישה
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+
+            <div class="back-link"><a href="../projects.html" class="btn-secondary">← כל הפרויקטים</a></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>G-GROUP</h2>
+                    <p>מובילים בייזום, פיתוח ובנייה של פרויקטים יוקרתיים למגורים ולמסחר. בבעלות גיא בלושינסקי.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h3>ניווט מהיר</h3>
+                    <ul class="footer-links">
+                        <li><a href="../about.html">אודות החברה</a></li>
+                        <li><a href="../projects.html">פרויקטים</a></li>
+                        <li><a href="../media.html">מן המדיה</a></li>
+                        <li><a href="../contact.html">צור קשר</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>פרויקטים נבחרים</h3>
+                    <ul class="footer-links">
+                        <li><a href="g-park-wellness.html">G-Park Wellness</a></li>
+                        <li><a href="hi-tower.html">Hi Tower - גבעתיים</a></li>
+                        <li><a href="../projects.html">פרויקטים נוספים</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>צור קשר</h3>
+                    <ul class="footer-links">
+                        <li>מגדלי אקרשטיין, המנופים 11, הרצליה</li>
+                        <li>בניין D, קומה 5</li>
+                        <li>052-3308287</li>
+                        <li>office@g-group1.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 G-Group Real Estate. כל הזכויות שמורות.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); });
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; });
+        mobileMenuClose.addEventListener('click', () => { mobileMenu.classList.remove('active'); document.body.style.overflow = ''; });
+        mobileMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.remove('active'); document.body.style.overflow = ''; }); });
+    </script>
+</body>
+</html>
